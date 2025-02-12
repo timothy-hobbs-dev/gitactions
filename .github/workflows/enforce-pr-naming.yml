@@ -1,0 +1,48 @@
+name: Enforce PR Naming & Checklist
+
+on:
+  pull_request:
+    types: [opened, edited, reopened]
+
+jobs:
+  validate-pr-title:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate PR Title
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          if [[ ! "$PR_TITLE" =~ ^(feat|fix|chore|hotfix)\/.*$ ]]; then
+            echo "❌ PR title must follow: feat/*, fix/*, chore/*, hotfix/*"
+            exit 1
+          fi
+          echo "✅ PR title is valid!"
+
+  add-pr-checklist:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add Checklist Comment
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { owner, repo, number } = context.issue;
+            const checklist = `
+            ## ✅ PR Checklist Before Merging
+
+            - [ ] I have tested the code to ensure it passes the acceptance criteria
+            - [ ] I have added necessary unit/integration tests
+            - [ ] I have checked for potential security vulnerabilities
+            - [ ] I have updated relevant documentation (if applicable)
+            - [ ] Code follows the project's style guide and best practices
+            - [ ] Peer review has been requested and approved
+
+            _Ensure all boxes are ticked before merging._ 🚀
+            `;
+            
+            github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: number,
+              body: checklist
+            });
