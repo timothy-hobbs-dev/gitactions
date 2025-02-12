@@ -1,35 +1,28 @@
-name: Require Code Review Before Merge
+name: Pull Request Review Check
 
 on:
   pull_request:
-    types: [opened, reopened, synchronize]
+    types: [opened, synchronize, reopened, ready_for_review]
 
 jobs:
-  request-review:
+  check-reviews:
     runs-on: ubuntu-latest
     steps:
-      - name: Request a Reviewer
-        uses: hmarr/auto-approve-action@v3
-        with:
-          reviewers: 'timothy.hobbs.kumah@gmail.com'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  enforce-review:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check for Approved Reviews
+      - name: Check Pull Request Review Status
         uses: actions/github-script@v7
         with:
           script: |
             const { data: reviews } = await github.rest.pulls.listReviews({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              pull_number: context.payload.pull_request.number
+              pull_number: context.issue.number
             });
-
-            const approved = reviews.some(review => review.state === "APPROVED");
-
-            if (!approved) {
-              core.setFailed("At least one approval is required before merging.");
+            
+            const approvedReviews = reviews.filter(review => review.state === 'APPROVED');
+            
+            if (approvedReviews.length < 1) {
+              core.setFailed('At least one approved review is required before merging.');
             }
+
+permissions:
+  pull-requests: read
