@@ -39,4 +39,10 @@ describe('ScoreCalculator', () => {
       expect(calculator.getIELTSBandScoreDescription(1)).toBe('Non User');
     });
   });
+
+  describe('getExamReport', () => {
+    test('provides exam report with study recommendation', () => {
+      expect(calculator.getExamReport(6.5)).toContain('Good score');
+    });
+  });
 });

@@ -33,6 +33,10 @@ class ScoreCalculator {
       if (bandScore >= 1) return "Non User";
       return "Did not attempt the test";
     }
+
+    getExamReport(bandScore) {
+      return `You scored ${bandScore} on the IELTS exam. ${this.getStudyRecommendation(bandScore)}`;
+    }
   }
-  
+    
   module.exports = ScoreCalculator;
