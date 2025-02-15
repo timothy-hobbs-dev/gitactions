@@ -20,6 +20,19 @@ class ScoreCalculator {
       if (bandScore >= 5.5) return "More practice needed - focus on weak areas.";
       return "Intensive study recommended.";
     }
+
+    getIELTSBandScoreDescription(bandScore) {
+      if (bandScore >= 9) return "Expert User";
+      if (bandScore >= 8) return "Very Good User";
+      if (bandScore >= 7) return "Good User";
+      if (bandScore >= 6) return "Competent User";
+      if (bandScore >= 5) return "Modest User";
+      if (bandScore >= 4) return "Limited User";
+      if (bandScore >= 3) return "Extremely Limited User";
+      if (bandScore >= 2) return "Intermittent User";
+      if (bandScore >= 1) return "Non User";
+      return "Did not attempt the test";
+    }
   }
   
   module.exports = ScoreCalculator;

@@ -10,7 +10,7 @@ describe('ScoreCalculator', () => {
 
   describe('calculateIELTSBandScore', () => {
     test('calculates correct average band score', () => {
-      expect(calculator.calculateIELTSBandScore(6.5, 7.0, 6.5, 7.0)).toBe(6.5);
+      expect(calculator.calculateIELTSBandScore(6.5, 7.0, 6.5, 7.0)).toBe(7.0);
     });
 
     test('rounds to nearest 0.5', () => {
@@ -29,6 +29,14 @@ describe('ScoreCalculator', () => {
       expect(calculator.getStudyRecommendation(7.5)).toContain('Ready for most universities');
       expect(calculator.getStudyRecommendation(6.5)).toContain('Good score');
       expect(calculator.getStudyRecommendation(5.5)).toContain('More practice needed');
+    });
+  });
+
+  describe('getIELTSBandScoreDescription', () => {
+    test('provides correct band score descriptions', () => {
+      expect(calculator.getIELTSBandScoreDescription(9)).toBe('Expert User');
+      expect(calculator.getIELTSBandScoreDescription(5)).toBe('Modest User1');
+      expect(calculator.getIELTSBandScoreDescription(1)).toBe('Non User');
     });
   });
 });
