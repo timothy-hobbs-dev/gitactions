@@ -39,4 +39,10 @@ describe('ScoreCalculator', () => {
       expect(calculator.getIELTSBandScoreDescription(1)).toBe('Non User');
     });
   });
+
+  describe('convert', () => {
+    test('converts score to IELTS band score', () => {
+      expect(calculator.convert(7)).toBe(16);
+    });
+  });
 });

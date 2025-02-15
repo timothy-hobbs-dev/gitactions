@@ -33,6 +33,11 @@ class ScoreCalculator {
       if (bandScore >= 1) return "Non User";
       return "Did not attempt the test";
     }
-  }
+
+    convert(score) {
+      return score * 2;
+    }
+
+}
   
   module.exports = ScoreCalculator;
