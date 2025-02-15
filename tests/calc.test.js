@@ -10,7 +10,7 @@ describe('ScoreCalculator', () => {
 
   describe('calculateIELTSBandScore', () => {
     test('calculates correct average band score', () => {
-      expect(calculator.calculateIELTSBandScore(6.5, 7.0, 6.5, 7.0)).toBe(6.5);
+      expect(calculator.calculateIELTSBandScore(6.5, 7.0, 6.5, 7.0)).toBe(7.0);
     });
 
     test('rounds to nearest 0.5', () => {
