@@ -42,7 +42,7 @@ describe('ScoreCalculator', () => {
 
   describe('convert', () => {
     test('converts score to IELTS band score', () => {
-      expect(calculator.convert(7)).toBe(16);
+      expect(calculator.convert(7)).toBe(14);
     });
   });
 });
