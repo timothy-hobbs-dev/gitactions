@@ -29,26 +29,7 @@ Linear Issue ID: [TYPE_HERE] <!-- Example: ENG-123 -->
 - [ ] I have performed a self-review of my own code
 - [ ] I have commented my code, particularly in hard-to-understand areas
 - [ ] I have made corresponding changes to the documentation
-- [ ] My changes generate no new warnings
 - [ ] All existing tests pass locally
-- [ ] I have tested my changes in dark mode (if applicable)
-- [ ] I have tested my changes on mobile view (if applicable)
-
-### 🌍 Impact Areas
-
-- [ ] Student Experience
-- [ ] Teacher Dashboard
-- [ ] Practice Tests
-- [ ] Writing Feedback System
-- [ ] Speaking Assessment
-- [ ] Progress Tracking
-- [ ] Other (please specify)
-
-### 📋 Additional Notes
-
-[Any additional information that reviewers should know about your changes]
-
----
 
 ### 🌟 Encouraging Message
 
