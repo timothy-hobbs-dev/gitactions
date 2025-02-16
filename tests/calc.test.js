@@ -35,7 +35,7 @@ describe('ScoreCalculator', () => {
   describe('getIELTSBandScoreDescription', () => {
     test('provides correct band score descriptions', () => {
       expect(calculator.getIELTSBandScoreDescription(9)).toBe('Expert User');
-      expect(calculator.getIELTSBandScoreDescription(5)).toBe('Modest User1');
+      expect(calculator.getIELTSBandScoreDescription(5)).toBe('Modest User');
       expect(calculator.getIELTSBandScoreDescription(1)).toBe('Non User');
     });
   });
