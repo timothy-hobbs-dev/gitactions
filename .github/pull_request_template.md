@@ -1,51 +1,5 @@
 # .github/pull_request_template.md
 
-<details>
-<summary>🇮🇹 Visualizza in italiano</summary>
-
-## 🎓 Pull Request del Percorso di Apprendimento IELTS
-
-### Ticket Linear
-
-ID Linear: [INSERISCI_QUI] <!-- Esempio: ENG-123 -->
-
-### 📝 Descrizione
-
-[Fornisci una descrizione chiara delle tue modifiche e di come aiutano i nostri studenti a realizzare il loro sogno di studiare all'estero]
-
-### 🖼️ Screenshot/Registrazioni (se applicabile)
-
-[Trascina e rilascia qui i tuoi screenshot per mostrare le modifiche]
-
-### 🔍 Tipo di Modifica
-
-- [ ] 📚 Nuova Funzionalità (modifica non distruttiva che aggiunge funzionalità)
-- [ ] 🐛 Correzione Bug (modifica non distruttiva che risolve un problema)
-- [ ] 💫 Miglioramento (miglioramento di funzionalità esistenti)
-- [ ] 📊 Miglioramento delle Prestazioni
-- [ ] 📝 Aggiornamento Documentazione
-
-### 🧪 Checklist Sviluppatore
-
-- [ ] Ho aggiunto/aggiornato i test che dimostrano che la mia correzione/funzionalità funziona
-- [ ] Il mio codice segue le linee guida di stile stabilite
-- [ ] Ho eseguito un'auto-revisione del mio codice
-- [ ] Ho commentato il mio codice, in particolare nelle aree difficili da comprendere
-- [ ] Ho apportato le modifiche corrispondenti alla documentazione
-- [ ] Tutti i test esistenti passano localmente
-
-### 🌟 Messaggio di Incoraggiamento
-
-Caro sviluppatore,
-
-Grazie per contribuire alla nostra missione di aiutare gli studenti a realizzare i loro sogni di studiare all'estero! Ogni riga di codice che scrivi avvicina qualcuno al proprio obiettivo di padroneggiare l'inglese e ottenere l'ammissione all'università dei loro sogni. La tua attenzione ai dettagli e il tuo impegno per la qualità fanno una vera differenza nella vita dei nostri studenti.
-
-Ricorda: Dietro ogni funzionalità che costruiamo, c'è uno studente da qualche parte nel mondo che diventa più sicuro nelle proprie capacità di inglese. Continua questo fantastico lavoro! 🌍✨
-
-_"Piccoli passi portano a grandi risultati - proprio come i nostri studenti che imparano l'inglese, una lezione alla volta!"_
-
-</details>
-
 ## 🎓 IELTS Learning Journey Pull Request
 
 ### Linear Ticket
