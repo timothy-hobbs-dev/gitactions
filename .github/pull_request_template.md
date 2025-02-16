@@ -1,6 +1,6 @@
 # .github/pull_request_template.md
 
-## 🎓 IELTS Learning Journey Pull Request
+## 🎓 Pull Request to make Edusogno better
 
 ### Linear Ticket
 
@@ -9,10 +9,6 @@ Linear Issue ID: [TYPE_HERE] <!-- Example: ENG-123 -->
 ### 📝 Description
 
 [Provide a clear description of your changes and how they help our learners achieve their dreams of studying abroad]
-
-### 🖼️ Screenshots/Recordings (if applicable)
-
-[Drag and drop your screenshots here to show the changes]
 
 ### 🔍 Type of Change
 
@@ -40,3 +36,5 @@ Thank you for contributing to our mission of helping students achieve their drea
 Remember: Behind every feature we build, there's a student somewhere in the world becoming more confident in their English skills. Keep up the amazing work! 🌍✨
 
 _"Small steps lead to big achievements - just like our students learning English, one lesson at a time!"_
+
+### May the code be with you ✨
