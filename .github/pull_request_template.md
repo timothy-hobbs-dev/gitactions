@@ -1,5 +1,3 @@
-# .github/pull_request_template.md
-
 ## 🎓 Pull Request to make Edusogno better
 
 ### Linear Ticket
