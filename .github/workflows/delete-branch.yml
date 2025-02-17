@@ -3,7 +3,7 @@ name: Delete Merged Branch
 on:
   pull_request:
     types:
-      - closed  
+      - closed
 
 jobs:
   delete-branch:
